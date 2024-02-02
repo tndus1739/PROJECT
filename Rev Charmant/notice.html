@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시판</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1em;
+      }
+
+      main {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .pagination a {
+        color: #333;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        border: 1px solid #ddd;
+        margin: 0 4px;
+      }
+
+      .pagination a.active {
+        background-color: #333;
+        color: white;
+      }
+
+      footer {
+        text-align: center;
+        padding: 1em;
+        background-color: #333;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>게시판</h1>
+    </header>
+
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th>게시글 번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>날짜</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- 여기에 게시물 데이터를 동적으로 추가할 수 있습니다. -->
+          <!-- 예를 들어, JavaScript를 사용하거나 서버에서 데이터를 동적으로 생성하여 추가할 수 있습니다. -->
+          <!-- 이 예제에서는 50개의 더미 데이터를 사용합니다. -->
+          <% for (let i = 1; i <= 50; i++) { %>
+          <tr>
+            <td><%= i %></td>
+            <td>게시글 제목 <%= i %></td>
+            <td>작성자<%= i %></td>
+            <td>날짜 <%= i %></td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+
+      <!-- 페이지네이션 -->
+      <div class="pagination">
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <!-- ... 중간 생략 ... -->
+        <a href="#">5</a>
+      </div>
+    </main>
+
+    <footer>&copy; 2024 My Website</footer>
+  </body>
+</html>

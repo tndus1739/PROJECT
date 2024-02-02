@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "Blacksword";
+  src: url("../fonts/Blacksword.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Floral";
+  src: url("../fonts/Boheme\ Floral.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Hijrnotes";
+  src: url("../fonts/Hijrnotes_PERSONAL_USE_ONLY.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PersonalUseOnly";
+  src: url("../fonts/Pharmount_PersonalUseOnly.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GowunDodum";
+  src: url("../fonts/GowunDodum-Regular.ttf") format("truetype");
+}
+
+.a1 {
+  font-family: "PersonalUseOnly";
+  color: aliceblue;
+}
+.a7 {
+  font-family: "Floral";
+  color: aliceblue;
+}
+
+.a11 {
+  font-family: "Hijrnotes";
+  color: aliceblue;
+}
+
+.a16 {
+  font-family: "Gowun Dodum", sans-serif;
+  color: aliceblue;
+}
+
+.b3 {
+  font-family: "GowunDodum";
+  color: rgb(57, 97, 132);
+}
+
+body {
+  background: #191919;
+  font-family: "Gowun Dodum", sans-serif;
+  box-sizing: border-box;
+}
+footer {
+  box-sizing: border-box;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #191919;
+  height: 20vh;
+  width: 100vw;
+  margin-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+  color: #ffffff;
+}
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin: 1rem 0 3rem 0; */
+}
+.footer-content ul {
+  padding: 0px;
+}
+
+.socials li {
+  margin: 0 10px;
+}
+.socials a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1.1px solid white;
+  padding: 3px;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 13px;
+  border-radius: 50%;
+}
+.socials a i {
+  font-size: 1.1rem;
+  width: 20px;
+
+  transition: color 0.4s ease;
+}
+.socials a:hover i {
+  color: rgb(145, 93, 187);
+}
+
+.footer-menu {
+  float: right;
+}
+.footer-menu ul {
+  display: flex;
+  margin-right: 30px;
+}
+.footer-menu ul li {
+  padding-right: 10px;
+  display: block;
+}
+.footer-menu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer-menu ul li a:hover {
+  color: #8f4bb7;
+}
+
+.text-table {
+  font-family: "Gowun Dodum", sans-serif;
+}
+
+.text-table > a {
+  text-decoration: none;
+}

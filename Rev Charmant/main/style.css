@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  overflow: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.round {
+  width: 40vw;
+  max-width: 300px;
+  height: 40vw;
+  max-height: 300px;
+  border-radius: 68% 54% 54% 67% / 72% 48% 75% 49%;
+  background-color: blueviolet;
+  background-image: url(../image/cake.jpg);
+
+  position: relative;
+  animation: rotate 60s infinite linear;
+}
+.round::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 1vw;
+  left: 0;
+  border-radius: inherit;
+  border: 2px solid rgba(251, 241, 241, 0.933);
+  transform: rotate(67deg);
+  animation: rotate 20s infinite linear;
+}
+.round::after {
+  content: "";
+  display: block;
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  top: -8%;
+  left: -5%;
+  border-radius: inherit;
+  border: 2px solid rgba(253, 180, 180, 0.886);
+  transform: rotate(223deg);
+  z-index: -1;
+  animation: rotate 40s infinite linear;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(180deg) scale(0.9);
+  }
+  75% {
+    transform: rotate(270deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}

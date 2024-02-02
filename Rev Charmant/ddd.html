@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+
+      .slideshow {
+        margin: 0 auto;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+
+        background-size: cover; /* 이미지를 화면에 맞게 조절 */
+        background-position: center; /* 이미지를 가운데 정렬 */
+        background-repeat: no-repeat; /* 배경 이미지 반복 없음 */
+      }
+
+      .slideshow > div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slideshow">
+      <div style="background-image: url('./image/berry.jpg')"></div>
+      <div style="background-image: url('./image/choco1.jpg')"></div>
+      <div style="background-image: url('./image/choco2.jpg')"></div>
+      <div
+        style="background-image: url('./image/slider-2-background-img-1.jpg')"
+      ></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".slideshow > div:gt(0)").hide();
+
+        setInterval(function () {
+          $(".slideshow > div:first")
+            .fadeOut(2500)
+            .next()
+            .fadeIn(2000)
+            .end()
+            .appendTo(".slideshow");
+        }, 3600);
+      });
+    </script>
+  </body>
+</html>
